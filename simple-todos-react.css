@@ -103,6 +103,7 @@ body {
 }
 
 .quiz {
+    margin-top: 10px;
     padding: 10px;
 }
 
@@ -122,4 +123,8 @@ body {
 
 .incorrect {
     text-decoration: line-through;
+}
+
+.clearboth{
+    clear: both;
 }

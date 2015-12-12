@@ -1,17 +1,22 @@
 quizesCollection = Immutable.fromJS([
   {
-    title: "how old are you?",
+    title: "Capital of Bangladesh?",
     correct: 'a',
-    options: {a: 13, b: 14, c: 15, d: 16,}
+    options: {a: "Dhaka", b: "Sydney", c: "Amsterdam", d: "New York",}
   },
   {
-    title: "how old were you?",
+    title: " কে বাংলাদেশে  ফেসবুক বন্ধ  করেছেন?",
     correct: 'b',
-    options: {a: 23, b: 24, c: 25, d: 26,}
+    options: {a: " গরুর হালিম", b: " তারানা হালিম", c: " মুরগির হালিম", d: "  খাসির  হালিম",}
   },
   {
-    title: "how old will you be you?",
+    title: "12*13 = ?",
     correct: 'b',
-    options: {a: 23, b: 24, c: 25, d: 26,}
-  }
+    options: {a: 146, b: 156, c: 166, d: 136,}
+  },
+  {
+    title: "11*? = 121",
+    correct: 'd',
+    options: {a: 23, b: 24, c: 25, d: 11,}
+  },
 ]);

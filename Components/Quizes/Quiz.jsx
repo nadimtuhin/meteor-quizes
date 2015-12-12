@@ -6,7 +6,7 @@ Quiz = React.createClass({
     Meteor.call('answer', qid, answer);
   },
 
-  renderMeta(answered, correct){
+  renderMeta(answered){
     return <div className="label label-info">
       <span>Answered by {answered === Meteor.user().username ? "you" : answered}! </span>
     </div>;
@@ -26,11 +26,11 @@ Quiz = React.createClass({
   render() {
     let {title, qid, options, answered, correct, answer} = this.props;
 
-    return <div className="col-xs-12 col-md-4">
+    return <div className={cx("col-xs-12 col-md-6", {clearboth: qid%2===0})}>
       <div className={cx("quiz",{answered})}>
         <h3>(Q {qid + 1}) {title}</h3>
 
-        {answered ? this.renderMeta(answered, correct) : null}
+        {answered ? this.renderMeta(answered) : null}
 
         <ul>
           {this.renderOptions(options, answer, correct)}
