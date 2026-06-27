@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Meteor
+        run: curl https://install.meteor.com/ | sh
+
+      - name: Add Meteor to PATH
+        run: echo "$HOME/.meteor" >> $GITHUB_PATH
+
+      - name: Install packages
+        run: meteor npm install --if-present
+        working-directory: .
+
+      - name: Check Meteor version
+        run: meteor --version
+
+      # ponytail: no test suite in repo; add `meteor test` here when tests exist
