@@ -1,6 +1,6 @@
 # Meteor Quizes
 
-A simple multi-user quiz app built with [Meteor](https://www.meteor.com/) and React.
+A multi-user quiz app built with [Meteor](https://www.meteor.com/) and React.
 
 ![Screenshot](screenshot.png)
 
