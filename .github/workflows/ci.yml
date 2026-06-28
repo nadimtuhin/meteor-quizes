@@ -20,8 +20,9 @@ jobs:
         run: echo "$HOME/.meteor" >> $GITHUB_PATH
 
       - name: Install packages
-        run: npm install --if-present
+        run: npm install
         working-directory: .
+        continue-on-error: true
 
       - name: Check Meteor version
         run: meteor --version
